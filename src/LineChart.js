@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
@@ -10,13 +10,27 @@ const options = {
   title: {
     text: "My chart"
   },
+  zoomType: "x",
   series: [
     {
       data: [
-        1,
-        2,
-        1,
-        4
+        // ["a", 1],
+        // ["b", 2],
+        // ["c", 2],
+        // ["d", 2]
+        {
+          x: 2,
+          y: 9,
+          name: "Point1",
+          color: "#00FF00"
+        },
+        {
+          x: 3,
+          y: 6,
+          name: "Point2",
+          color: "#00FF00"
+        }
+
         // 3,
         // 6,
         // 7,
@@ -65,13 +79,102 @@ const options = {
         // 6
       ]
     }
-  ]
+  ],
+  scrollbar: {
+    enabled: true
+  }
 };
 
-const LineChart = () => (
-  <div>
-    <HighchartsReact highcharts={Highcharts} options={options} />
-  </div>
-);
+const options2 = {
+  chart: {
+    // type: "column",
+    type: "line"
+  },
+  title: {
+    text: "titleeee"
+  },
+  xAxis: {
+    categories: [""],
+    labels: {
+      enabled: true
+    },
+    max: 6
+  },
+  yAxis: {
+    labels: {
+      enabled: true
+    }
+  },
+  legend: {
+    reversed: true
+  },
+  plotOptions: {
+    series: {
+      stacking: "normal"
+    }
+  },
+  series: [
+    {
+      data: [
+        {
+          x: 1,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00"
+        },
+        {
+          x: 2,
+          y: 6,
+          name: "Point3"
+        },
+        {
+          x: 3,
+          y: 6,
+          name: "Point4"
+        },
+        {
+          x: 4,
+          y: 6,
+          name: "Point5"
+        },
+        {
+          x: 5,
+          y: 6,
+          name: "Point6"
+        },
+        {
+          x: 6,
+          y: 6,
+          name: "Point7"
+        },
+        {
+          x: 7,
+          y: 6,
+          name: "Point8"
+        }
+      ]
+    }
+  ],
+  credits: {
+    enabled: false
+  },
+  scrollbar: {
+    enabled: true
+  }
+};
+const LineChart = () => {
+  const chartRef = useRef();
+  console.log(" Ref => ", chartRef);
+  return (
+    <div>
+      <HighchartsReact
+        ref={chartRef}
+        highcharts={Highcharts}
+        options={options2}
+        constructorType={"chart"}
+      />
+    </div>
+  );
+};
 
 export default LineChart;
