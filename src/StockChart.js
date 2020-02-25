@@ -44,6 +44,48 @@ const options = {
           name: "Point2",
           color: "#00FF00",
           width: "20px"
+        },
+        {
+          x: 2,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00",
+          width: "20px"
+        },
+        {
+          x: 2,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00",
+          width: "20px"
+        },
+        {
+          x: 2,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00",
+          width: "20px"
+        },
+        {
+          x: 2,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00",
+          width: "20px"
+        },
+        {
+          x: 2,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00",
+          width: "20px"
+        },
+        {
+          x: 2,
+          y: 9,
+          name: "Point2",
+          color: "#00FF00",
+          width: "20px"
         }
       ]
     }
@@ -55,10 +97,10 @@ const options = {
     enabled: false
   },
   rangeSelector: {
-    enabled: false
+    enabled: true
   },
   navigator: {
-    enabled: false
+    enabled: true
   }
 };
 
