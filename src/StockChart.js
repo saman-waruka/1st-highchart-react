@@ -7,7 +7,7 @@ const options = {
     type: "column"
   },
   title: {
-    text: "StockChart"
+    text: ""
   },
   xAxis: {
     type: "datetime",
@@ -33,27 +33,87 @@ const options = {
   series: [
     {
       name: "Votes",
+      // data: [
+      //   [moment("2019/01").valueOf(), 1000],
+      //   [moment("2019/02").valueOf(), 575],
+      //   [moment("2019/04").valueOf(), 427],
+      //   [moment("2019/05").valueOf(), 399],
+      //   [moment("2019/03").valueOf(), 523],
+      //   [moment("2019/06").valueOf(), 309],
+      //   [moment("2019/07").valueOf(), 278]
+      // ]
+
       data: [
-        [moment("2019/01").valueOf(), 1000],
-        [moment("2019/02").valueOf(), 575],
-        [moment("2019/03").valueOf(), 523],
-        [moment("2019/04").valueOf(), 427],
-        [moment("2019/05").valueOf(), 399],
-        [moment("2019/06").valueOf(), 309],
-        [moment("2019/07").valueOf(), 278]
-        // [1456365947000, 239],
-        // [1456466947000, 235],
-        // [1456567947000, 203],
-        // [1456668947000, 182],
-        // [1456769947000, 157]
-        // ["Sankey Diagram", 149],
-        // ["Add Navigation bar for Y-Axis in Highstock", 144],
-        // ["Grouped x-axis", 143],
-        // ["ReactJS plugin", 137],
-        // ["3D surface charts", 134],
-        // ["Draw lines over a stock chart, for analysis purpose", 118],
-        // ["Data module for database tables", 118],
-        // ["Draggable points", 117]
+        {
+          x: moment("2019/01").valueOf(),
+          y: 1000,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/02").valueOf(),
+          y: 740,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/03").valueOf(),
+          y: 200,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/04").valueOf(),
+          y: 0,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/05").valueOf(),
+          y: 50,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/06").valueOf(),
+          y: 1100,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/07").valueOf(),
+          y: 800,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/08").valueOf(),
+          y: 500,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/09").valueOf(),
+          y: 900,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/10").valueOf(),
+          y: 100,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/11").valueOf(),
+          y: 400,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2019/12").valueOf(),
+          y: 800,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2020/01").valueOf(),
+          y: 760,
+          color: "#66a3ff"
+        },
+        {
+          x: moment("2020/02").valueOf(),
+          y: 670,
+          color: "#66a3ff"
+        }
       ]
     }
   ],
