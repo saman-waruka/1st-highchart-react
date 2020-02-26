@@ -78,6 +78,7 @@ const options = {
 
 const StockChart = () => (
   <div>
+    BarStock.js
     <HighchartsReact
       highcharts={Highcharts}
       constructorType={"StockChart"}

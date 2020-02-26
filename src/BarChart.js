@@ -4,9 +4,12 @@ import HighchartsReact from "highcharts-react-official";
 
 const options2 = {
   chart: {
-    type: "bar",
+    type: "column",
     marginLeft: 150,
     inverted: false
+  },
+  scrollbar: {
+    enabled: true
   },
   title: {
     text: "Most popular ideas by April 2016"
@@ -22,10 +25,7 @@ const options2 = {
       text: null
     },
     min: 0,
-    max: 2,
-    scrollbar: {
-      enabled: true
-    },
+    max: 6,
     tickLength: 0
   },
   yAxis: {
@@ -83,6 +83,7 @@ const LineChart = () => {
   console.log(" Ref => ", chartRef);
   return (
     <div>
+      BarChart.js
       <HighchartsReact
         ref={chartRef}
         highcharts={Highcharts}

@@ -88,10 +88,14 @@ const options = {
 const options2 = {
   chart: {
     // type: "column",
-    type: "line"
+    type: "spline",
+    scrollablePlotArea: {
+      minWidth: 700,
+      scrollPositionX: 1
+    }
   },
   title: {
-    text: "titleeee"
+    text: "LineChart"
   },
   xAxis: {
     categories: [""],
@@ -110,7 +114,10 @@ const options2 = {
   },
   plotOptions: {
     series: {
-      stacking: "normal"
+      // stacking: "normal",
+      series: {
+        allowPointSelect: true
+      }
     }
   },
   series: [
@@ -157,9 +164,6 @@ const options2 = {
   ],
   credits: {
     enabled: false
-  },
-  scrollbar: {
-    enabled: true
   }
 };
 const LineChart = () => {
@@ -167,6 +171,7 @@ const LineChart = () => {
   console.log(" Ref => ", chartRef);
   return (
     <div>
+      Line chart
       <HighchartsReact
         ref={chartRef}
         highcharts={Highcharts}
